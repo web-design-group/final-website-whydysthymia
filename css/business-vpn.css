@@ -51,7 +51,7 @@ img {
 .logo {
     font-family: "Cal Sans", "Montserrat", sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     color: #FFFFFF;
 }
 
@@ -151,7 +151,7 @@ img {
 .title {
     text-align: center;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0 0 38px;
 }
 
@@ -160,11 +160,9 @@ img {
 }
 
 .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
 }
 
 .card {
@@ -186,8 +184,7 @@ img {
 
 .price {
     background: #A7CBF5;
-    flex: 0 0 403px;
-    width: 403px;
+    width: 100%;
     min-height: 568px;
     padding: 34px 26px 24px;
     display: flex;

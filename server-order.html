@@ -14,124 +14,169 @@
 </head>
 <body>
     <div class="page">
-        <header class="header">
-            <div class="wrap top">
-                <a class="logo" href="./index.html">ShieldNode</a>
-                <nav class="menu">
-                    <a class="link" href="./index.html">Главная</a>
-                    <div class="drop">
-                        <a class="dropbtn" href="./personal-vpn.html">Тарифы VPN</a>
-                        <div class="dropmenu">
-                            <a class="dropitem" href="./personal-vpn.html">Личный VPN</a>
-                            <a class="dropitem" href="./business-vpn.html">Бизнес VPN</a>
-                        </div>
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand logo mb-0" href="./index.html">ShieldNode</a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#snNavbar"
+                        aria-controls="snNavbar"
+                        aria-expanded="false"
+                        aria-label="Открыть меню"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="snNavbar">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Главная</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Тарифы VPN
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./personal-vpn.html">Личный VPN</a></li>
+                                    <li><a class="dropdown-item" href="./business-vpn.html">Бизнес VPN</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Серверы
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./vps.html">VPS</a></li>
+                                    <li><a class="dropdown-item" href="./dedicated-servers.html">Выделенные<br>серверы</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./support.html">Поддержка</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="drop">
-                        <a class="dropbtn" href="./vps.html">Серверы</a>
-                        <div class="dropmenu">
-                            <a class="dropitem" href="./vps.html">VPS</a>
-                            <a class="dropitem" href="./dedicated-servers.html">Выделенные серверы</a>
-                        </div>
-                    </div>
-                    <a class="link" href="./support.html">Поддержка</a>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </header>
 
         <main class="submain">
             <section class="orderSection">
-                <div class="wrap">
+                <div class="container">
                     <h1 class="orderTitle">Оформление заказа</h1>
 
-                    <div class="orderLayout">
-                        <div class="orderCard">
-                            <div class="orderInner">
-                                <div class="orderCol">
-                                    <h2 class="orderHead">Ваша конфигурация</h2>
+                    <div class="row g-4 justify-content-center align-items-start">
+                        <div class="col-12 col-xl-8">
+                            <div class="card orderCard border-0">
+                                <div class="card-body p-0">
+                                    <div class="row g-0">
+                                        <div class="col-12 col-lg-6 orderCol">
+                                            <h2 class="orderHead">Ваша конфигурация</h2>
 
-                                    <div class="orderConfig">
-                                        <div class="orderRow">
-                                            <span class="orderLabel">Локация</span>
-                                            <span class="orderValue">Швеция</span>
+                                            <div class="orderConfig">
+                                                <div class="orderRow">
+                                                    <span class="orderLabel">Локация</span>
+                                                    <span class="orderValue">Швеция</span>
+                                                </div>
+                                                <div class="orderRow">
+                                                    <span class="orderLabel">CPU</span>
+                                                    <span class="orderValue">16 ядер</span>
+                                                </div>
+                                                <div class="orderRow">
+                                                    <span class="orderLabel">ОЗУ</span>
+                                                    <span class="orderValue">64Гб</span>
+                                                </div>
+                                                <div class="orderRow">
+                                                    <span class="orderLabel">Хранилище</span>
+                                                    <span class="orderValue">500Гб</span>
+                                                </div>
+                                                <div class="orderRow">
+                                                    <span class="orderLabel">ОС</span>
+                                                    <span class="orderValue">Debian</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="orderRow">
-                                            <span class="orderLabel">CPU</span>
-                                            <span class="orderValue">16 ядер</span>
-                                        </div>
-                                        <div class="orderRow">
-                                            <span class="orderLabel">ОЗУ</span>
-                                            <span class="orderValue">64Гб</span>
-                                        </div>
-                                        <div class="orderRow">
-                                            <span class="orderLabel">Хранилище</span>
-                                            <span class="orderValue">500Гб</span>
-                                        </div>
-                                        <div class="orderRow">
-                                            <span class="orderLabel">ОС</span>
-                                            <span class="orderValue">Debian</span>
+
+                                        <div class="col-12 col-lg-6 orderCol orderCol--border">
+                                            <h2 class="orderHead">Данные для оплаты</h2>
+
+                                            <form>
+                                                <div class="mb-3">
+                                                    <input class="form-control payInput" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000">
+                                                </div>
+
+                                                <div class="row g-2 mb-3">
+                                                    <div class="col-6">
+                                                        <input class="form-control payInput" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input class="form-control payInput" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="CVV">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <input class="form-control payInput" type="text" autocomplete="cc-name" placeholder="IVANOV IVAN">
+                                                </div>
+
+                                                <label class="payLabel form-label" for="mail">Укажите Вашу действующую почту</label>
+                                                <div class="mb-2">
+                                                    <input class="form-control payInput" id="mail" type="email" autocomplete="email" placeholder="example@email.com">
+                                                </div>
+
+                                                <p class="payHelp">
+                                                    На данную почту придут все данные и инструкции, необходимые для подключения
+                                                    к серверу. Мы не несём ответственность, если почта была указана неверно.
+                                                </p>
+
+                                                <a class="offerLink" href="#">Условия оферты</a>
+
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input agreeCheck" type="checkbox" value="1" id="agreeOffer">
+                                                    <label class="form-check-label agree" for="agreeOffer">Я согласен с условиями оферты</label>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="orderCol">
-                                    <h2 class="orderHead">Данные для оплаты</h2>
-
-                                    <form class="payForm">
-                                        <input class="payInput" type="text" placeholder="0000 0000 0000 0000">
-
-                                        <div class="payRow">
-                                            <input class="payInput" type="text" placeholder="MM/YY">
-                                            <input class="payInput" type="text" placeholder="CVV">
-                                        </div>
-
-                                        <input class="payInput" type="text" placeholder="IVANOV IVAN">
-
-                                        <label class="payLabel" for="mail">Укажите Вашу действующую почту</label>
-                                        <input class="payInput" id="mail" type="email" placeholder="example@email.com">
-
-                                        <p class="payHelp">
-                                            На данную почту придут все данные и инструкции, необходимые для подключения
-                                            к серверу. Мы не несём ответственность, если почта была указана неверно.
-                                        </p>
-
-                                        <a class="offerLink" href="#">Условия оферты</a>
-
-                                        <label class="agree">
-                                            <input class="agreeCheck" type="checkbox" name="offer">
-                                            <span>Я согласен с условиями оферты</span>
-                                        </label>
-                                    </form>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="orderSide">
-                            <div class="totalCard">
-                                <div class="totalHead">
-                                    <span>Итого</span>
-                                    <span>4990 руб.</span>
-                                </div>
-
-                                <div class="promoBox">
-                                    <div class="promoRow">
-                                        <span>Услуги (1 шт.)</span>
+                        <div class="col-12 col-xl-4">
+                            <div class="card totalCard border-0 mb-4">
+                                <div class="card-body p-0">
+                                    <div class="totalHead">
+                                        <span>Итого</span>
                                         <span>4990 руб.</span>
                                     </div>
-                                    <div class="promoRow">
-                                        <span>Скидка</span>
-                                        <span>нет</span>
-                                    </div>
 
-                                    <p class="promoLabel">Промокод</p>
+                                    <div class="promoBox">
+                                        <ul class="list-group list-group-flush mb-3">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center promoRow">
+                                                <span>Услуги (1 шт.)</span>
+                                                <span>4990 руб.</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center promoRow">
+                                                <span>Скидка</span>
+                                                <span>нет</span>
+                                            </li>
+                                        </ul>
 
-                                    <div class="promoAction">
-                                        <input class="promoInput" type="text">
-                                        <button class="promoBtn" type="button">применить</button>
+                                        <p class="promoLabel">Промокод</p>
+                                        <div class="input-group">
+                                            <input class="form-control promoInput" type="text" placeholder="Введите код">
+                                            <button class="btn btn-primary promoBtn" type="button">применить</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <a class="payBtn" href="./payment-success.html">Оплатить</a>
+                            <a class="btn btn-primary payBtn w-100" href="./payment-success.html">Оплатить</a>
                         </div>
                     </div>
                 </div>
@@ -161,5 +206,10 @@
             <p class="copy">© 2025 ShieldNode. Все права защищены.</p>
         </footer>
     </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+    ></script>
 </body>
 </html>

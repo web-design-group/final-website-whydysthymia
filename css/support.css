@@ -21,10 +21,7 @@ a {
     color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+
 
 .page {
     width: 100%;
@@ -51,7 +48,7 @@ img {
 .logo {
     font-family: "Cal Sans", "Montserrat", sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     color: #FFFFFF;
 }
 
@@ -202,6 +199,6 @@ img {
     text-align: center;
     color: #9B9B9B;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
 }

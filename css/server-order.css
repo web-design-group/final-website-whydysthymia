@@ -40,104 +40,96 @@ img {
     background: #007BFF;
 }
 
-.top {
-    min-height: 66px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
 .logo {
     font-family: "Cal Sans", "Montserrat", sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     color: #FFFFFF;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
+.navbar .logo {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
 }
 
-.link,
-.dropbtn {
-    display: inline-block;
-    font-family: "Montserrat", sans-serif;
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 66px;
+}
+
+.navbar > .container {
+    max-width: 1360px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.navbar .navbar-nav {
+    gap: 48px;
+}
+
+.navbar .nav-item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.navbar .nav-link {
+    color: #FFFFFF;
     font-size: 22px;
     font-weight: 400;
-    color: #FFFFFF;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
     opacity: 1;
 }
 
-.link:hover,
-.dropbtn:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
     opacity: 0.5;
 }
 
-.drop {
-    position: relative;
-    padding: 18px 0;
+.navbar .nav-link.active {
+    color: #FFFFFF;
 }
 
-.dropmenu {
-    position: absolute;
-    top: calc(100% - 2px);
-    left: 0;
-    min-width: 180px;
+.navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar .dropdown-menu {
     background: #AFD4FC;
+    border: none;
     border-radius: 16px;
     box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.22);
     padding: 10px 0;
-    z-index: 5;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
-    pointer-events: none;
 }
 
-.drop:hover .dropmenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.dropitem {
-    display: block;
+.navbar .dropdown-item {
     padding: 8px 12px;
     font-size: 20px;
     font-weight: 400;
     color: #333333;
     line-height: 1.25;
-    position: relative;
     opacity: 1;
 }
 
-.dropitem + .dropitem {
-    margin-top: 10px;
-    padding-top: 14px;
-}
-
-.dropitem + .dropitem::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 12px;
-    width: calc(100% - 44px);
-    height: 1px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.dropitem:hover {
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: transparent;
     opacity: 0.5;
+}
+
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .dropdown-menu {
+        margin-top: 0;
+    }
 }
 
 .submain {
@@ -203,33 +195,17 @@ img {
     margin: 0 0 58px;
 }
 
-.orderLayout {
-    display: grid;
-    grid-template-columns: 858px 461px;
-    gap: 42px;
-    justify-content: center;
-    align-items: start;
-}
-
 .orderCard {
-    width: 858px;
-    height: 568px;
     background: #A7CBF5;
     border-radius: 30px;
     padding: 18px 18px 16px;
-}
-
-.orderInner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
 }
 
 .orderCol {
     padding: 18px 22px 10px;
 }
 
-.orderCol + .orderCol {
+.orderCol--border {
     border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -261,12 +237,6 @@ img {
     font-size: 14px;
 }
 
-.payForm {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
 .payLabel {
     font-size: 16px;
     font-weight: 500;
@@ -286,15 +256,6 @@ img {
     text-align: center;
 }
 
-.payRow {
-    display: flex;
-    gap: 14px;
-}
-
-.payRow .payInput {
-    flex: 1 1 auto;
-}
-
 .payHelp {
     max-width: 360px;
     font-size: 14px;
@@ -310,10 +271,7 @@ img {
 }
 
 .agree {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 8px;
+    margin-top: 0;
     font-size: 16px;
     font-weight: 500;
 }
@@ -330,6 +288,18 @@ img {
     border-radius: 50%;
     position: relative;
     flex-shrink: 0;
+}
+
+.form-check-input.agreeCheck {
+    margin-top: 0.15rem;
+}
+
+.form-check-input.agreeCheck:focus {
+    box-shadow: none;
+}
+
+.form-check-input.agreeCheck:checked {
+    background-color: #FFFFFF;
 }
 
 .agreeCheck:checked {
@@ -349,15 +319,13 @@ img {
 }
 
 .orderSide {
-    width: 461px;
+    width: 100%;
 }
 
 .totalCard {
-    width: 461px;
-    height: 408px;
     background: #A7CBF5;
     border-radius: 30px;
-    padding: 18px 20px 14px;
+    padding: 110px 20px 14px;
 }
 
 .totalHead {
@@ -378,35 +346,27 @@ img {
 }
 
 .promoRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 16px;
     color: #7f7f7f;
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .promoLabel {
     font-size: 18px;
     font-weight: 500;
     color: #333333;
-    margin: 118px 0 12px;
+    margin: 14px 0 12px;
 }
 
-.promoAction {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    overflow: hidden;
-    border-radius: 18px;
-    background: #FDFDFD;
+.list-group-item.promoRow {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .promoInput {
-    flex: 1 1 auto;
     height: 44px;
     border: none;
-    border-radius: 18px 0 0 18px;
     background: #FDFDFD;
     padding: 0 14px;
     font: inherit;
@@ -414,10 +374,9 @@ img {
 }
 
 .promoBtn {
-    width: 106px;
     height: 44px;
     border: none;
-    border-radius: 0 18px 18px 0;
+    border-radius: 16px;
     background: #007BFF;
     color: #FFFFFF;
     font-size: 12px;
@@ -425,12 +384,7 @@ img {
 }
 
 .payBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 461px;
     height: 116px;
-    margin-top: 44px;
     border: none;
     border-radius: 30px;
     background: #007BFF;
@@ -440,7 +394,7 @@ img {
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    line-height: 1;
+    line-height: 2;
 }
 
 .promoBtn:hover,
@@ -449,29 +403,25 @@ img {
     color: #D3D3D3;
 }
 
-@media (max-width: 1100px) {
-    .orderLayout {
-        grid-template-columns: 1fr;
-    }
-
-    .orderCard,
-    .orderSide,
-    .totalCard,
-    .payBtn {
-        width: 100%;
-    }
-}
-
 @media (max-width: 900px) {
-    .orderInner {
-        grid-template-columns: 1fr;
+    .navbar .navbar-nav {
+        gap: 0;
+    }
+
+    .navbar .nav-item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .navbar .nav-link {
+        font-size: 18px;
     }
 
     .orderCard {
         height: auto;
     }
 
-    .orderCol + .orderCol {
+    .orderCol--border {
         border-left: none;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         margin-top: 16px;

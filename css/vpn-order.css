@@ -51,7 +51,7 @@ img {
 .logo {
     font-family: "Cal Sans", "Montserrat", sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     color: #FFFFFF;
 }
 
@@ -198,7 +198,7 @@ img {
 .orderTitle {
     text-align: center;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
     margin: 0 0 58px;
 }
